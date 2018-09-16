@@ -2,6 +2,6 @@
 
 <% @trips.each do |trip| %>
   <ul>
-    <li><%= trip.name %></li>
+    <li><%= link_to trip.name, trip_path(trip) %></li>
   </ul>
 <% end %>
