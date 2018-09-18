@@ -3,7 +3,7 @@
 <% @trip.trails.each do |trail| %>
   <p>Trails included in this hike:</p>
   <ul>
-    <li>Name: <%= trail.name %></li>
+    <li>Name: <%= link_to trail.name, trail_path(trail) %></li>
     <li>Length: <%= trail.length %></li>
     <li>Address: <%= trail.address %></li>
   </ul>
@@ -12,3 +12,4 @@
 <p>Total Trail Distance: <%= @trip.total_distance %></p>
 <p>Average Trail Distance: <%= @trip.avg_trail_distance %></p>
 <p>Longest Trail Distance: <%= @trip.longest_trail %></p>
+<p>Shortest Trail Distance: <%= @trip.shortest_trail %></p>

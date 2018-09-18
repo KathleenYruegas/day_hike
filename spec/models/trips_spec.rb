@@ -29,5 +29,11 @@ describe Trip, type: :model do
         expect(@trip.longest_trail).to eq(@trail_2.length)
       end
     end
+
+    context '#shortest_trail' do
+      it 'should show shortest trail distance' do
+        expect(@trip.shortest_trail).to eq(@trail_3.length)
+      end
+    end
   end
 end

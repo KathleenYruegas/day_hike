@@ -22,5 +22,10 @@ describe "when I visit trip show page" do
     expect(page).to have_content("Total Trail Distance: #{trip.total_distance}")
     expect(page).to have_content("Average Trail Distance: #{trip.avg_trail_distance}")
     expect(page).to have_content("Longest Trail Distance: #{trip.longest_trail}")
+    expect(page).to have_content("Shortest Trail Distance: #{trip.shortest_trail}")
+
+    click_on(trail_1.name)
+    expect(current_path).to eq(trail_path(trail_1))
+    expect(page).to have_content(trail_1.name)
   end
 end
